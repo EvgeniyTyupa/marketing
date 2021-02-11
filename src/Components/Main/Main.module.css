@@ -1,0 +1,240 @@
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Arial MT Std", Arial, Helvetica, sans-serif;
+}
+
+/* HOME */
+.home{
+    display: flex;
+    flex-direction: column;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    background-image: url("../../Assets/back_main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.blackBox{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: -1;
+}
+.language{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.language button{
+    font-size: 1.4rem;
+    color: white;
+    text-transform: initial;
+    font-weight: normal;
+    font-family: "Arial MT Std";
+}
+.homeHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.homeHeader h2, .homeHeader h1{
+    margin-block-end: 0;
+    margin-block-start: 0;
+    height: max-content;
+}
+.homeHeader h2{
+    font-size: 5vw;
+    color: #001c66;
+    font-weight: bold;
+    position: relative;
+}
+.homeHeader h1{
+    color: white;
+    font-size: 9vw;
+    font-weight: bold;
+    margin-left: 45px;
+}
+.subHeader{
+    width: 35vw;
+}
+.subHeader p{
+    font-size: 4.3vw;
+    color: white;
+    font-weight: bold;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-transform: uppercase;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.date p{
+    margin-block-end: 0;
+    font-size: 2vw;
+}
+.date span{
+    font-size: 1.8vw;
+}
+.time{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 15px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    font-size: 2vw;
+    margin-top: auto;
+    justify-content: flex-end;
+}
+.time p{
+    margin-block-end: 0;
+    margin-block-start: 40px;
+    text-transform: uppercase;
+}
+
+
+/* newReality */
+.newReality{
+    width: 100%;
+    background-color: #001c66;
+    height: 355px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 44px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    box-sizing: border-box;
+}
+
+/* INFO */
+.info{
+    display: flex;
+    flex-direction: column;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    box-sizing: border-box;
+    align-items: center;
+}
+.info button{
+    color: white;
+    font-size: 3.5vw;
+    background-color: #001c66;
+    margin-top: 60px;
+    width: 35%;
+    border-radius: 0;
+}
+.info button:hover{
+    background-color: #001652;
+}
+.infoText{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.infoText p{
+    margin-block-end: 10px;
+    margin-block-start: 0;
+    text-align: center;
+    color: #001c66;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* WHO */
+.who{
+    background-color: #eabcab;
+    width: 100%;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    box-sizing: border-box;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.who h2{
+    font-size: 3.5vw;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    position: relative;
+    top: -30px;
+    text-transform: uppercase;
+    color: #001c66;
+    font-weight: bold;
+}
+.whoSides{
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+}
+.quadro{
+    width: 600px;
+    display: flex;
+    height: 650px;
+    margin-left: 200px;
+}
+.lineVertical{
+    background-color: #fb1776;
+    width: 2px;
+    height: 100%;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: #fb1776;
+}
+.whoContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 35px;
+}
+.whoText{
+    background-color: white;
+    padding: 32px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    width: 97%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #001c66;
+}
+.whoText{
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+/* THEMES */
+.themes{
+    width: 100%;
+    padding-left: 6rem;
+    box-sizing: border-box;
+}
+.themes h2{
+    color: #001c66;
+    font-size: 3.5vw;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    font-weight: bold;
+    position: relative;
+    top: -40px;
+    text-transform: uppercase;
+}
