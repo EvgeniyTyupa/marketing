@@ -66,7 +66,53 @@ const Main = (props) => {
             </div>
             <div className={classes.themes}>
                 <h2>{t("themes.title")}</h2>
+                <div className={classes.themesText}>
+                    <p>{t("themes.one")}</p>
+                    <p>{t("themes.two")}</p>
+                    <p>{t("themes.three")}</p>
+                    <p>{t("themes.four")}</p>
+                    <p>{t("themes.five")}</p>
+                    <p>{t("themes.six")}</p>
+                    <p>{t("themes.seven")}</p>
+                </div>
+                <Button>{t("register")}</Button>
             </div>
+            <div className={classes.menu}>
+                <h2>{t("menu.title")}</h2>
+
+                <div className={classes.modules}>
+                    <div className={classes.module}>
+                        <h3>{t("menu.module_one")}</h3>
+                        <p className={classes.moduleSub}>{t("menu.one_title")}</p>
+                        <div className={classes.points}>
+                            <h5>{t("menu.speaker")}</h5>
+                            <p>{t("menu.lesson_one")}</p>
+                            <p>{t("menu.lesson_two")}</p>
+                            <p>{t("menu.lesson_three")}</p>
+                            <p>{t("menu.lesson_four")}</p>
+                            <p>{t("menu.homework")}</p>
+                        </div>
+                    </div>
+                    <div className={classes.module}>
+                        <h3>{t("menu.module_two")}</h3>
+                        <p className={classes.moduleSub}>{t("menu.two_title")}</p>
+                        <div className={classes.points}>
+                            <h5>{t("menu.speaker")}</h5>
+                            <p>{t("menu.lesson2_one")}</p>
+                            <p>{t("menu.lesson2_two")}</p>
+                            <p>{t("menu.homework")}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={classes.bonus}>
+                <div className={classes.bonusText}>
+                    <p>{t("bonus.one")}</p>
+                    <p>{t("bonus.two")}</p>
+                    <Button>{t("register")}</Button>
+                </div>
+            </div>
+            
         </div>
     );
 }

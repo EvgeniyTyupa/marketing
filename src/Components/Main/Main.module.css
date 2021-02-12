@@ -136,7 +136,7 @@
 .info button{
     color: white;
     font-size: 3.5vw;
-    background-color: #001c66;
+    background-color: #001c56;
     margin-top: 60px;
     width: 35%;
     border-radius: 0;
@@ -169,7 +169,7 @@
     align-items: center;
 }
 .who h2{
-    font-size: 3.5vw;
+    font-size: 60px;
     margin-block-end: 0;
     margin-block-start: 0;
     position: relative;
@@ -187,7 +187,7 @@
     width: 600px;
     display: flex;
     height: 650px;
-    margin-left: 200px;
+    margin-left: 8vw;
 }
 .lineVertical{
     background-color: #fb1776;
@@ -227,14 +227,127 @@
     width: 100%;
     padding-left: 6rem;
     box-sizing: border-box;
+    padding-bottom: 100px;
 }
 .themes h2{
     color: #001c66;
-    font-size: 3.5vw;
+    font-size: 60px;
     margin-block-end: 0;
     margin-block-start: 0;
     font-weight: bold;
     position: relative;
     top: -40px;
     text-transform: uppercase;
+}
+.themesText{
+    padding-left: 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    color: #001652;
+    width: 500px;
+}
+.themes button{
+    color: white;
+    font-size: 60px;
+    background-color: #001c56;
+    margin-top: 60px;
+    width: 455px;
+    border-radius: 0;
+    margin-left: 8vw;
+    line-height: 1.3;
+}
+.themes button:hover{
+    background-color: #001652;
+}
+
+/* MENU */
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.menu h2{
+    font-size: 60px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    color: #001c66;
+}
+
+.modules{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.module{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 60px;
+}
+.module + .module{
+    align-items: flex-start;
+}
+.module h3{
+    border: 1px solid #ff081d;
+    padding: 12px 14px;
+    font-size: 24px;
+    font-weight: normal;
+}
+.moduleSub{
+    font-size: 24px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-transform: uppercase;
+}
+.points{
+    align-self: flex-start;
+}
+.module + .module .points{
+    align-self: flex-end;
+    text-align: right;
+}
+.module h5{
+    font-size: 16px;
+}
+.points p{
+    margin-block-end: 20px;
+    margin-block-start: 10px;
+}
+
+
+/* BONUS */
+.bonus{
+    display: flex;
+    padding-left: 6rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 150px;
+}
+.bonusText{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+}
+.bonusText p{
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.bonus button{
+    color: white;
+    font-size: 60px;
+    background-color: #001c56;
+    margin-top: 60px;
+    width: 455px;
+    border-radius: 0;
+    margin-left: 8vw;
+    line-height: 1.3;
+}
+.bonus button:hover{
+    background-color: #001652;
 }
