@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     font-family: "Arial MT Std", Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 /* HOME */
@@ -63,7 +64,7 @@
     margin-left: 45px;
 }
 .subHeader{
-    width: 35vw;
+    width: 36vw;
 }
 .subHeader p{
     font-size: 4.3vw;
@@ -118,7 +119,7 @@
     color: white;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 44px;
+    font-size: 2.5vw;
     padding-left: 6rem;
     padding-right: 6rem;
     box-sizing: border-box;
@@ -158,7 +159,7 @@
 
 /* WHO */
 .who{
-    background-color: #eabcab;
+    background-color: #e9b9af;
     width: 100%;
     padding-left: 6rem;
     padding-right: 6rem;
@@ -167,6 +168,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background: url("../../Assets/krosi.jpg") 80% 40% no-repeat;
+    background-size: inherit; */
 }
 .who h2{
     font-size: 60px;
@@ -187,7 +190,7 @@
     width: 600px;
     display: flex;
     height: 650px;
-    margin-left: 8vw;
+    margin-left: 10%;
 }
 .lineVertical{
     background-color: #fb1776;
@@ -221,6 +224,17 @@
     margin-block-end: 0;
     margin-block-start: 0;
 }
+.krosi{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.krosi img{
+    width: 90%;
+    position: relative;
+    top: -25px;
+}
 
 /* THEMES */
 .themes{
@@ -228,6 +242,13 @@
     padding-left: 6rem;
     box-sizing: border-box;
     padding-bottom: 100px;
+    position: relative;
+}
+.themes img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 45%;
 }
 .themes h2{
     color: #001c66;
@@ -251,7 +272,7 @@
     font-size: 60px;
     background-color: #001c56;
     margin-top: 60px;
-    width: 455px;
+    width: 495px;
     border-radius: 0;
     margin-left: 8vw;
     line-height: 1.3;
@@ -266,14 +287,22 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-top: 75px;
+    background-color: #e9eaea;
 }
 .menu h2{
     font-size: 60px;
-    margin-block-end: 0;
+    margin-block-end: 0px;
     margin-block-start: 0;
+    height: 100px;
     color: #001c66;
+    width: 100%;
+    background-color: white;
+    text-align: center;
 }
-
+.menu img{
+    width: 100%;
+}
 .modules{
     width: 50%;
     display: flex;
@@ -287,7 +316,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 60px;
 }
-.module + .module{
+.rev{
     align-items: flex-start;
 }
 .module h3{
@@ -301,11 +330,16 @@
     margin-block-end: 0;
     margin-block-start: 0;
     text-transform: uppercase;
+    width: 80%;
+    text-align: right;
+}
+.rev .moduleSub{
+    text-align: left;
 }
 .points{
     align-self: flex-start;
 }
-.module + .module .points{
+.rev .points{
     align-self: flex-end;
     text-align: right;
 }
@@ -325,6 +359,13 @@
     box-sizing: border-box;
     width: 100%;
     padding-bottom: 150px;
+    position: relative;
+    background-color: #e9eaea;
+}
+.bonus img{
+    position: absolute;
+    right: 0;
+    width: 49%;
 }
 .bonusText{
     display: flex;
@@ -343,11 +384,582 @@
     font-size: 60px;
     background-color: #001c56;
     margin-top: 60px;
-    width: 455px;
+    width: 495px;
     border-radius: 0;
     margin-left: 8vw;
     line-height: 1.3;
 }
 .bonus button:hover{
     background-color: #001652;
+}
+
+.treners{
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.treners h2{
+    font-size: 60px;
+    margin-block-end: 30px;
+    margin-block-start: 0;
+    position: relative;
+    text-transform: uppercase;
+    color: #001c66;
+    font-weight: bold;
+}
+.payment{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.payment h2{
+    font-size: 60px;
+    margin-block-end: 30px;
+    margin-block-start: 0;
+    position: relative;
+    text-transform: uppercase;
+    color: #001c66;
+    font-weight: bold;
+    text-align: center;
+}
+.pay{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    box-shadow: 0 0 10px -5px gray;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #001c66;
+}
+.pay h3{
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-align: center;
+}
+.paymentText{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.pay p{
+    margin-block-end: 10px;
+    margin-block-start: 20px;
+    font-weight: 500;
+}
+.pay span{
+    margin-top: auto;
+    text-align: center;
+}
+.pay strong{
+    font-size: 26px;
+    color: #fb2227;
+}
+.pay button{
+    margin-top: 15px;
+    background-color: #025f09;
+    border-radius: 0;
+}
+.pay button:hover{
+    background-color: #03500a;
+}
+.pay button a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.payContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.payment button{
+    margin-top: 25px;
+}
+.payContainer button{
+    margin-top: 15px;
+}
+
+.payment .registerBut{
+    background-color: #001c66 !important;
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: max-content;
+    border-radius: 0;
+    align-self: center;
+    line-height: 1.4;
+    margin-top: 45px;
+    width: 30%;
+}
+.payment .registerBut:hover{
+    background-color: #001652 !important;
+}
+
+.registerBut a{
+    color: white;
+    text-decoration: none;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer h2{
+    font-size: 38px;
+    margin-block-end: 30px;
+    margin-block-start: 0;
+    position: relative;
+    text-transform: uppercase;
+    color: #001c66;
+    font-weight: bold;
+    
+}
+.footer p, a{
+    color: #e81e1c;
+    text-decoration: none;
+    text-align: center;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+.socialLinks{
+    margin-top: 25px;
+    margin-bottom: 30px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.socialLinks img{
+    width: 35px;
+}
+
+@media screen and (max-width: 1500px){
+    .quadro{
+        margin-left: 0;
+    }
+    .who{
+        padding-right: 0;
+    }
+    .who h2{
+        left: -3rem;
+    }
+    .moduleSub{
+        width: 99%;
+    }
+    .bonusText{
+        width: 49%;
+    }
+}
+
+
+@media screen and (max-width: 1279px){
+    .homeHeader{
+        padding-left: 1.8rem;
+        margin-top: 15%;
+    }
+    .homeHeader h2{
+        font-size: 66px;
+    }
+    .homeHeader h1{
+        font-size: 106px;
+    }
+    .subHeader{
+        width: 80%;
+        padding-left: 1.8rem;
+        box-sizing: border-box;
+    }
+    .subHeader p{
+        font-size: 54px;
+    }
+    .date{
+        padding-left: 1.8rem;
+        box-sizing: border-box;
+    }
+    .date p{
+        font-size: 30px;
+    }
+    .date span{
+        font-size: 22px;
+    }
+    .time{
+        font-size: 25px;
+    }
+    .infoText{
+        font-size: 19px;
+    }
+    .themes h2{
+        font-size: 46px;
+        top: -30px
+    }
+    .modules{
+        width: 60%;
+    }
+    .points p{
+        font-size: 18px;
+    }
+    .points h5{
+        font-size: 20px;
+    }
+    .bonus{
+        position: relative;
+        top: -2px;
+    }
+    .treners{
+        padding-bottom: 0;
+    }
+    .pay{
+        width: 28%;
+    }
+    .pay span{
+        font-size: 18px;
+    }
+    .pay h3{
+        font-size: 24px;
+    }
+    .paymentText p{
+        font-size: 20px;
+    }
+    .pay button a{
+        font-size: 24px;
+    }
+    .footer p, .footer a{
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 968px){
+    .home{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        background-position-x: 10%;
+    }
+    .homeHeader h2{
+        font-size: 48px;
+    }
+    .homeHeader h1{
+        font-size: 85px;
+    }
+    .subHeader p{
+        font-size: 42px;
+    }
+    .date p{
+        font-size: 27px;
+    }
+    .date span{
+        font-size: 20px;
+    }
+    .newReality{
+        font-size: 4.5vw;
+        text-align: center;
+    }
+    .info{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-bottom: 30px;
+    }
+    .info button{
+        width: 50%;
+        font-size: 38px;
+    }
+    .who{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        height: max-content;
+        padding-bottom: 3rem;
+    }
+    .whoSides{
+        flex-direction: column;
+    }
+    .whoContent{
+        margin-left: 0;
+    }
+    .quadro{
+        width: 100%;
+    }
+    .who h2{
+        font-size: 50px;
+        text-align: center;
+        left: 0;
+    }
+    .krosi{
+        display: none;
+    }
+    .themes{
+        display: flex;
+        flex-direction: column;
+    }
+    .themes img{
+        display: none;
+    }
+    .themes h2{
+        text-align: center;
+    }
+    .themes{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 50px;
+    }
+    .themesText{
+        text-align: center;
+        padding-left: 0;
+        width: 100%;
+    }
+    .themes button{
+        align-self: center;
+        margin-left: 0;
+    }
+    .modules{
+        width: 80%;
+    }
+    .bonus{
+        padding-left: 3rem;
+    }
+    .bonus button{
+        margin-left: 12vw;
+    }
+    .bonus img{
+        top: 10%;
+    }
+    .payment .registerBut{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .homeHeader{
+        padding-left: 0;
+        margin-top: 10%;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+    }
+    .homeHeader h1{
+        margin-left: 0;
+    }
+    .subHeader{
+        padding-left: 0;
+    }
+    .subHeader p{
+        font-size: 30px;
+    }
+    .date{
+        padding-left: 0;
+    }
+    .date span{
+        margin-top: 20px;
+    }
+    .time p{
+        margin-block-start: 15px;
+    }
+    .info button{
+        font-size: 26px;
+    }
+    .who h2{
+        font-size: 32px; 
+        top: -20px;
+    }
+    .whoSides{
+        margin-top: 0;
+    }
+    .themes{
+        padding-bottom: 0;
+    }
+    .themes h2{
+        font-size: 32px;
+        top: -20px;
+    }
+    .themesText{
+        font-size: 16px;
+    }
+    .themes button{
+        font-size: 42px;
+        width: 80%;
+    }
+    .menu h2{
+        font-size: 44px;
+        height: 75px;
+    }
+    .bonus{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 4rem;
+    }
+    .bonusText{
+        width: 100%;
+    }
+    .bonus img{
+        display: none;
+    }
+    .bonus button{
+        width: 80%;
+        margin-left: 0;
+        align-self: center;
+        font-size: 42px;
+    }
+    .treners{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .treners h2{
+        font-size: 42px;
+    }
+    .payment h2{
+        font-size: 42px;
+    }
+    .payContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .pay{
+        width: 50%;
+    }
+    .pay + .pay{
+        margin-top: 25px;
+    }
+    .newReality{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media screen and (max-width: 468px){
+    .home{
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .info button{
+        width: 80%;
+    }
+    .newReality{
+        height: 255px;
+    }
+    .info{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .who h2{
+        font-size: 25px;
+        top: 0;
+        margin-top: 15px;
+    }
+    .who{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .whoText{
+        width: 100%;
+    }
+    .themes{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .themes h2{
+        font-size: 28px;
+        top: 0;
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+    .menu h2{
+        font-size: 34px;
+    }
+    .modules{
+        width: 90%;
+    }
+    .bonus{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .treners h2{
+        font-size: 34px;
+    }
+    .payment .registerBut{
+        width: 86%;
+    }
+    .payment h2{
+        font-size: 39px;
+    }
+    .footer{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .footer p, .footer a{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .whoText{
+        height: max-content;
+        margin-top: 25px;
+    }
+    .themes button{
+        font-size: 28px;
+    }
+    .menu h2{
+        height: 50px;
+        font-size: 28px;
+    }
+    .moduleSub{
+        font-size: 22px;
+    }
+    .bonus button{
+        font-size: 32px;
+    }
+    .treners{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .payment h2{
+        font-size: 28px;
+    }
+    .who{
+        height: 925px;
+    }
+    .socialLinks{
+        width: 260px;
+    }
+    .pay{
+        width: 65%;
+    }
+    .newReality{
+        font-size: 7.5vw;
+    }
+    .homeHeader h2{
+        font-size: 32px;
+    }
+    .homeHeader h1{
+        font-size: 68px;
+    }
+    .subHeader p{
+        font-size: 22px;
+    }
+    .date p{
+        font-size: 18px;
+    }
+    .date span{
+        margin-top: 45px;
+        font-size: 12px;
+    }
+    .time p{
+        font-size: 16px;
+    }
+    .infoText p{
+        margin-block-end: 15px;
+    }
 }
