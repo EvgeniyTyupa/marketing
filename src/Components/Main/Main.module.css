@@ -38,8 +38,8 @@
     font-size: 1.4rem;
     color: white;
     text-transform: initial;
-    font-weight: normal;
-    font-family: "Arial MT Std";
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .homeHeader {
     display: flex;
@@ -207,6 +207,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-left: 35px;
+    font-size: 18px;
 }
 .whoText{
     background-color: white;
@@ -643,6 +644,9 @@
 }
 
 @media screen and (max-width: 968px){
+    .lineVertical{
+        display: none;
+    }
     .home{
         padding-left: 3rem;
         padding-right: 3rem;
@@ -737,6 +741,9 @@
     }
     .payment .registerBut{
         width: 50%;
+    }
+    .whoText{
+        width: 100%;
     }
 }
 

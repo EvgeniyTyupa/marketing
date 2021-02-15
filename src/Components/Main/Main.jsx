@@ -159,9 +159,9 @@ const Main = (props) => {
                 <h2>{t("who.title")}</h2>
                 <div className={classes.whoSides}>
                     <div className={classes.quadro}>
-                        <div className={classes.pneVertical}></div>
+                        <div className={classes.lineVertical}></div>
                         <div className={classes.whoContent}>
-                            <div className={classes.pne}></div>
+                            <div className={classes.line}></div>
                             <div className={classes.whoText}>
                                 <p>{t("who.one")}</p>
                                 <p>{t("who.two")}</p>
@@ -169,7 +169,7 @@ const Main = (props) => {
                                 <p>{t("who.four")}</p>
                                 <p>{t("who.all")}</p>
                             </div>
-                            <div className={classes.pne}></div>
+                            <div className={classes.line}></div>
                         </div>
                     </div>
                     <div className={classes.krosi}>
@@ -195,7 +195,7 @@ const Main = (props) => {
             </div>
             <div className={classes.menu}>
                 <h2>{t("menu.title")}</h2>
-                <img src={menu}/>
+                <img src={menu} data-aos="fade-top"/>
                 <div className={classes.modules}>
                     <div className={classes.module} data-aos="fade-left">
                         <h3>{t("menu.module_one")}</h3>
