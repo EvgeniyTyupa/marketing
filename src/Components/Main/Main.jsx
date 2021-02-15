@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classes from './Main.module.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { Button, Grid, Typography } from '@material-ui/core';
 import { useTranslation } from "react-i18next";
 import { connect } from 'react-redux';
@@ -23,11 +23,24 @@ import linkedin from '../../Assets/linkedin.svg';
 import youtube from '../../Assets/youtube.png';
 import tg from '../../Assets/tg.png';
 import Register from '../Common/Register/Register';
+import Preloader from '../Common/Preloader/Preloader';
 
 const Main = (props) => {
     const { t, i18n } = useTranslation();
     const [currentTrener, setCurrentTrener] = useState(0);
     const [isOpenRegister, setIsOpenRegister] = useState(false);
+    const [url, setUrl] = useState("");
+    const [isRedirect, setIsRedirect] = useState(false);
+
+    useEffect(()=>{
+        if(window.location.pathname === "/register_done" && !props.isSuccess){
+            setIsRedirect(true);
+        }
+    },[]);
+
+    useEffect(()=>{
+        setUrl(window.location.href);
+    },[]);
 
     const handleLanguage = (language) => {
         props.setCurrentLanguage(language);
@@ -102,7 +115,9 @@ const Main = (props) => {
 
     return(
         <div className={classes.main}>
-            {isOpenRegister && <Register setIsOpenRegister={setIsOpenRegister}/>}
+            {isRedirect && <Redirect to="/"/>}
+            {props.isFetching && <Preloader/>}
+            {isOpenRegister && <Register url={url} setIsOpenRegister={setIsOpenRegister}/>}
             <div className={classes.blackBox}></div>
             {/* HOME */}
             <div className={classes.home}>
@@ -110,30 +125,30 @@ const Main = (props) => {
                     <Button onClick={()=>{handleLanguage("ua")}} style={{opacity: props.currentLanguage === "ua" ? 1 : 0.5}}>UA</Button>
                     <Button onClick={()=>{handleLanguage("ru")}} style={{opacity: props.currentLanguage === "ru" ? 1 : 0.5}}>RU</Button>
                 </div>
-                <div className={classes.homeHeader}>
+                <div className={classes.homeHeader} data-aos="fade-right">
                     <h2>MARKETING</h2>
                     <h1>PRO:</h1>
                 </div>
-                <div className={classes.subHeader}>
+                <div className={classes.subHeader} data-aos="fade-down">
                     <p>{t("home.sub")}</p>
                 </div>
-                <div className={classes.date}>
+                <div className={classes.date} data-aos="fade-down">
                     <p>{t("home.month")}</p>
                     <span>{t("home.module")}</span>
                 </div>
-                <div className={classes.time}>
+                <div className={classes.time} data-aos="fade-left">
                     <p>{t("home.start")}</p>
                     <p>{t("home.end")}</p>
                 </div>
             </div>
             <div className={classes.newReality}>
-                <p>{t("newReality")}</p>
+                <p data-aos="fade-down">{t("newReality")}</p>
             </div>
             <div className={classes.info}>
-                <Button className={classes.registerBut} onClick={()=>{setIsOpenRegister(true)}}>
+                <Button className={classes.registerBut} onClick={()=>{setIsOpenRegister(true)}} data-aos="zoom-in">
                     <NavLink to="/register">{t("register")}</NavLink>
                 </Button>
-                <div className={classes.infoText}>
+                <div className={classes.infoText} data-aos="fade-down">
                     <p>{t("info.one")}</p>
                     <p>{t("info.two")}</p>
                     <p>{t("info.three")}</p>
@@ -158,13 +173,13 @@ const Main = (props) => {
                         </div>
                     </div>
                     <div className={classes.krosi}>
-                        <img src={krosi}/>
+                        <img src={krosi} data-aos="fade-left"/>
                     </div>
                 </div>
             </div>
             <div className={classes.themes}>
                 <h2>{t("themes.title")}</h2>
-                <div className={classes.themesText}>
+                <div className={classes.themesText} data-aos="fade-right">
                     <p>{t("themes.one")}</p>
                     <p>{t("themes.two")}</p>
                     <p>{t("themes.three")}</p>
@@ -173,7 +188,7 @@ const Main = (props) => {
                     <p>{t("themes.six")}</p>
                     <p>{t("themes.seven")}</p>
                 </div>
-                <Button className={classes.registerBut}>
+                <Button onClick={()=>{setIsOpenRegister(true)}} className={classes.registerBut} data-aos="fade-top">
                     <NavLink to="/register">{t("register")}</NavLink>
                 </Button>
                 <img src={sweater}/>
@@ -182,7 +197,7 @@ const Main = (props) => {
                 <h2>{t("menu.title")}</h2>
                 <img src={menu}/>
                 <div className={classes.modules}>
-                    <div className={classes.module}>
+                    <div className={classes.module} data-aos="fade-left">
                         <h3>{t("menu.module_one")}</h3>
                         <p className={classes.moduleSub}>{t("menu.one_title")}</p>
                         <div className={classes.points}>
@@ -194,7 +209,7 @@ const Main = (props) => {
                             <p>{t("menu.homework")}</p>
                         </div>
                     </div>
-                    <div className={classes.module + " " + classes.rev}>
+                    <div className={classes.module + " " + classes.rev} data-aos="fade-right"> 
                         <h3>{t("menu.module_two")}</h3>
                         <p className={classes.moduleSub}>{t("menu.two_title")}</p>
                         <div className={classes.points}>
@@ -210,7 +225,7 @@ const Main = (props) => {
                             <p>{t("menu.homework")}</p>
                         </div>
                     </div>
-                    <div className={classes.module + " " + classes.rev}>
+                    <div className={classes.module + " " + classes.rev} data-aos="fade-left">
                         <h3>{t("menu.module_three")}</h3>
                         <p className={classes.moduleSub}>{t("menu.three_title")}</p>
                         <div className={classes.points}>
@@ -222,7 +237,7 @@ const Main = (props) => {
                             <p>{t("menu.homework")}</p>
                         </div>
                     </div>
-                    <div className={classes.module}>
+                    <div className={classes.module} data-aos="fade-right">
                         <h3>{t("menu.module_four")}</h3>
                         <p className={classes.moduleSub}>{t("menu.four_title")}</p>
                         <div className={classes.points}>
@@ -236,7 +251,7 @@ const Main = (props) => {
                             <p>{t("menu.homework")}</p>
                         </div>
                     </div>
-                    <div className={classes.module + " " + classes.rev}>
+                    <div className={classes.module + " " + classes.rev} data-aos="fade-left">
                         <h3>{t("menu.module_five")}</h3>
                         <p className={classes.moduleSub}>{t("menu.five_title")}</p>
                         <div className={classes.points}>
@@ -252,7 +267,7 @@ const Main = (props) => {
                             <p>{t("menu.homework")}</p>
                         </div>
                     </div>
-                    <div className={classes.module}>
+                    <div className={classes.module} data-aos="fade-right">
                         <h3>{t("menu.module_six")}</h3>
                         <p className={classes.moduleSub}>{t("menu.six_title")}</p>
                         <div className={classes.points}>
@@ -273,7 +288,7 @@ const Main = (props) => {
                             <p>{t("menu.homework")}</p>
                         </div>
                     </div>
-                    <div className={classes.module + " " + classes.rev}>
+                    <div className={classes.module + " " + classes.rev} data-aos="fade-left">
                         <h3>{t("menu.module_seven")}</h3>
                         <p className={classes.moduleSub}>{t("menu.seven_title")}</p>
                         <div className={classes.points}>
@@ -284,7 +299,7 @@ const Main = (props) => {
                             <p>{t("menu.homework")}</p>
                         </div>
                     </div>
-                    <div className={classes.module}>
+                    <div className={classes.module} data-aos="fade-right">
                         <h3>{t("menu.module8")}</h3>
                         <div className={classes.points}>
                             <h5>{t("menu.speakers")}</h5>
@@ -297,12 +312,12 @@ const Main = (props) => {
             </div>
             <div className={classes.bonus}>
                 <div className={classes.bonusText}>
-                    <p>{t("bonus.one")}</p>
-                    <p>{t("bonus.two")}</p>
-                    <Button className={classes.registerBut}>
+                    <p data-aos="fade-right">{t("bonus.one")}</p>
+                    <p data-aos="fade-right">{t("bonus.two")}</p>
+                    <Button onClick={()=>{setIsOpenRegister(true)}} className={classes.registerBut}>
                         <NavLink to="/register">{t("register")}</NavLink>
                     </Button>
-                    <img src={keksiki}/>
+                    <img src={keksiki} data-aos="fade-down"/>
                 </div>
             </div>
             <div className={classes.treners}>
@@ -312,7 +327,7 @@ const Main = (props) => {
             <div className={classes.payment}>
                 <h2>{t("payment.title")}</h2>
                 <div className={classes.payContainer}>
-                    <div className={classes.pay}>
+                    <div className={classes.pay} data-aos="zoom-in">
                         <h3>{t("payment.one.title")}</h3>
                         <div className={classes.paymentText}>
                             <p>{t("payment.one.one")}</p>
@@ -325,7 +340,7 @@ const Main = (props) => {
                             <a href="https://secure.wayforpay.com/page?vkh=60291641-5544-4ea2-87a2-234f22d1dba8">{t("payment.pay")}</a>
                         </Button>
                     </div>
-                    <div className={classes.pay}>
+                    <div className={classes.pay} data-aos="zoom-in">
                         <h3>{t("payment.two.title")}</h3>
                         <div className={classes.paymentText}>
                             <p>{t("payment.two.one")}</p>
@@ -341,11 +356,11 @@ const Main = (props) => {
                         </Button>
                     </div>
                 </div>
-                <Button className={classes.registerBut}>
+                <Button onClick={()=>{setIsOpenRegister(true)}} className={classes.registerBut}>
                     <NavLink to="/register">{t("register")}</NavLink>
                 </Button>
             </div>
-            <div className={classes.footer}>
+            <div className={classes.footer} data-aos="fade-top">
                 <h2>{t("footer.title")}</h2>
                 <a href="mailto:yuliya.kameneva@gmail.com">yuliya.kameneva@gmail.com</a>
                 <div className={classes.footerBlock}>
@@ -376,7 +391,8 @@ const Main = (props) => {
 
 let mapStateToProps = (state) => ({
     isFetching: state.common.isFetching,
-    currentLanguage: state.common.currentLanguage
+    currentLanguage: state.common.currentLanguage,
+    isSuccess: state.common.isSuccess
 });
 
 export default connect(mapStateToProps, {

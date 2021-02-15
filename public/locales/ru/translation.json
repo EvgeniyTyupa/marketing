@@ -171,7 +171,8 @@
     "registration": {
         "name": "Имя",
         "phone": "Телефон",
-        "email": "Email"
+        "email": "Email",
+        "done": "Спасибо! Вы успешно зарегистрировались."
     }
 
 }
