@@ -32,6 +32,8 @@ const Main = (props) => {
     const [url, setUrl] = useState("");
     const [isRedirect, setIsRedirect] = useState(false);
 
+    
+
     useEffect(()=>{
         if(window.location.pathname === "/register_done" && !props.isSuccess){
             setIsRedirect(true);
